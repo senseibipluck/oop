@@ -1,5 +1,5 @@
 <?php
-class Person{
+class Person extends Student implements painter{
 
         private $name ;
         private $age ;
@@ -20,21 +20,50 @@ class Person{
 
         function makePayment(){
             echo "payment successfull with account".$this->accountNumber;
+            $this->goToCollege();
+        }
+
+        privatefunction paint(){
+        echo "i will paint";
         }
         
 }
 
 
-$person_1=['bipluck shrestha',30,1213122319028390182309];
-$person_2=['ram shrestha',31,123123123123123123123213];
+class Student{
+
+    function __construct(){}
+    protected function goToCollege (){
+        echo "i m going to college";
+    }
+
+    function goToEdu(){
+
+    }
+
+}
+
+interface painter{
+
+
+   private function paint();
+
+
+
+}
+
+
+$person_1=['bipluck shrestha',30,12131223190182309];
+$person_2=['ram shrestha',31,1231231231231123213];
 
 
 $p1 = new Person($person_1[0],$person_1[1],$person_1[2]);
 
+
 $p2 = new Person($person_2[0],$person_2[1],$person_2[2]);
 
 
-$p1->name = 'Sita shrestha';
+#$p1->name = 'Sita shrestha';
 $p1->biohie();
 echo "<hr>";
 $p1->makePayment();
@@ -47,3 +76,5 @@ $p1->makePayment();
 echo "<hr>";
 
 echo "hello world";
+
+echo "<hr>";
