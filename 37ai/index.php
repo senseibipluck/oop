@@ -23,7 +23,7 @@ class Person extends Student implements painter{
             $this->goToCollege();
         }
 
-        privatefunction paint(){
+        function paint(){
         echo "i will paint";
         }
         
@@ -45,10 +45,7 @@ class Student{
 
 interface painter{
 
-
-   private function paint();
-
-
+    function paint();
 
 }
 
