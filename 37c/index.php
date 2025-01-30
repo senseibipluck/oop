@@ -34,3 +34,12 @@
     $p1->bio();
     echo "<hr>";
     $p1->makePayment();
+    echo "<hr>";
+
+    $p2 = new Person();
+    $p2->setValue($person_2[0],$person_2[1],$person_2[2]);
+    $p2->bio();
+    echo "<hr>";
+    $p2->makePayment();
+
+
