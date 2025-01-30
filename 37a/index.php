@@ -1,6 +1,6 @@
 <?php
 
-    class Person{
+    class Person extends Student implements painter{
 
         private $name ;
         private $age ;
@@ -29,10 +29,30 @@
         function payment(){
             $this->makePayment();
             $this->connectToIps();
+            $this->goToSchool();
+        }
+
+        function paint($picture){
+            echo "i m painting";
         }
 
     }
 
+
+    class Student {
+
+        function __construct(){}
+
+        public function goToSchool(){
+            echo "i m going to school";
+        }
+
+    }
+
+    interface painter{
+
+        function paint($picture);
+    }
 
         
     $person_1 = ['Bipluck shrestha',30,123122343432] ;
@@ -49,6 +69,9 @@
     echo "<hr>";
     $p2->payment();
 
+
+    echo "<hr>";
+    $p1->goToSchool();
 
 
 
